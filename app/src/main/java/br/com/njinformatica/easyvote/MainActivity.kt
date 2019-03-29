@@ -28,6 +28,12 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, "Usuário logado", Toast.LENGTH_SHORT).show()
             }
         })
+
+        loginViewModel.isLogged.observe(this,  Observer {
+            if (it) {
+                Toast.makeText(this, "Usuário logado", Toast.LENGTH_SHORT).show()
+            }
+        })
     }
 
     private fun setupListeners(){
