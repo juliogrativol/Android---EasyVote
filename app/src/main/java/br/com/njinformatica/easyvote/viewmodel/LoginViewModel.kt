@@ -34,16 +34,16 @@ class LoginViewModel : ViewModel() {
                     {
                         isLogged.value = true
                         message.value = "Usuário logado com sucesso"
+                        isLoading.value = false
                     },
                     {
                         message.value = "Usuário ou senha inválidos"
-                    }
-            )
+                        isLoading.value = false
+                    })
         } else {
             message.value = "Usuário e senha obrigatórios!"
+            isLoading.value = false
         }
-
-        isLoading.value = false
     }
 
     private fun validaForm(login: String, password: String): Boolean {
@@ -54,16 +54,13 @@ class LoginViewModel : ViewModel() {
         val call = newsApi.login(login)
         call.enqueue(object : Callback<Login> {
             override fun onFailure(call: Call<Login>, t: Throwable) {
-                message.value = t.message
-                isLoading.value = false
                 failureAction()
             }
-
             override fun onResponse(call: Call<Login>, response: Response<Login>) {
                 if (response.isSuccessful){
-                    message.value = "Login efetuado com sucesso"
-                    isLoading.value = false
                     succesAction()
+                }else{
+                    failureAction()
                 }
             }
         })
