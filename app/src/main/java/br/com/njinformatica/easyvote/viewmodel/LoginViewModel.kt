@@ -18,7 +18,7 @@ class LoginViewModel : ViewModel() {
     val isLoading = MutableLiveData<Boolean>()
     var isLogged = MutableLiveData<Boolean>()
 
-    val newsApi: EasyVoteAPI = RetrofitProvider.esasyVoteAPI
+    val easyVoteApi: EasyVoteAPI = RetrofitProvider.esasyVoteAPI
 
     init {
         isLogged.value = false
@@ -51,7 +51,7 @@ class LoginViewModel : ViewModel() {
     }
 
     private fun login(login: Login, succesAction: ()->Unit, failureAction: ()->Unit){
-        val call = newsApi.login(login)
+        val call = easyVoteApi.login(login)
         call.enqueue(object : Callback<Login> {
             override fun onFailure(call: Call<Login>, t: Throwable) {
                 failureAction()

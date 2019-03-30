@@ -35,7 +35,7 @@ class SessionActivity : AppCompatActivity() {
         session_list.layoutManager = StaggeredGridLayoutManager(columns,
                 StaggeredGridLayoutManager.VERTICAL)//LinearLayoutManager(this)
         session_list.adapter = SessionAdapter()
-        sessionViewModel.getData()
+        sessionViewModel.getData("juliogrativol")
     }
 
     private fun subscribe() {
