@@ -33,11 +33,11 @@ class LoginViewModel : ViewModel() {
             login(Login(login, password),
                     {
                         isLogged.value = true
-                        message.value = "Usuário logado com sucesso"
+                        message.value = "Usuário logado com sucesso."
                         isLoading.value = false
                     },
                     {
-                        message.value = "Usuário ou senha inválidos"
+                        message.value = "Usuário ou senha inválidos."
                         isLoading.value = false
                     })
         } else {

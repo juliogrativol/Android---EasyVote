@@ -1,5 +1,6 @@
 package br.com.njinformatica.easyvote
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ProgressBar
@@ -26,7 +27,7 @@ class MainActivity : AppCompatActivity() {
     private fun subscribe(){
         loginViewModel.isLogged.observe(this,  Observer {
             if (it) {
-                //abrir activity de listagem de sessões
+                startActivity(Intent(this, SessionActivity::class.java))
             }
         })
 
