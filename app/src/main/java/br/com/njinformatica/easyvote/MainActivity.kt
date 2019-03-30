@@ -27,7 +27,9 @@ class MainActivity : AppCompatActivity() {
     private fun subscribe(){
         loginViewModel.isLogged.observe(this,  Observer {
             if (it) {
-                startActivity(Intent(this, SessionActivity::class.java))
+                startActivity(Intent(this, SessionActivity::class.java).apply {
+                    putExtra(LOGIN_EXTRA, text_login.text.toString())
+                })
             }
         })
 

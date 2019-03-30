@@ -15,10 +15,12 @@ import kotlinx.android.synthetic.main.activity_session.*
 class SessionActivity : AppCompatActivity() {
 
     private lateinit var sessionViewModel: SessionViewModel
+    private lateinit var login : String;
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_session)
+        login = intent.getStringExtra(LOGIN_EXTRA)
 
         sessionViewModel = ViewModelProviders.of(this)
                 .get(SessionViewModel::class.java)
@@ -35,7 +37,7 @@ class SessionActivity : AppCompatActivity() {
         session_list.layoutManager = StaggeredGridLayoutManager(columns,
                 StaggeredGridLayoutManager.VERTICAL)//LinearLayoutManager(this)
         session_list.adapter = SessionAdapter()
-        sessionViewModel.getData("juliogrativol")
+        sessionViewModel.getData(login)
     }
 
     private fun subscribe() {
