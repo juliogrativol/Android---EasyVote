@@ -37,7 +37,7 @@ class SessionActivity : AppCompatActivity() {
 
         session_list.layoutManager = StaggeredGridLayoutManager(columns,
                 StaggeredGridLayoutManager.VERTICAL)//LinearLayoutManager(this)
-        session_list.adapter = SessionAdapter{session->
+        session_list.adapter = SessionAdapter{ session->
             startActivity(Intent(this,
                     SessionDetailActivity::class.java).apply {
                 putExtra(SESSION_EXTRA, session.id)
