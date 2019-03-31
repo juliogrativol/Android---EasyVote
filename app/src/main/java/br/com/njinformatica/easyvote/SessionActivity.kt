@@ -1,5 +1,6 @@
 package br.com.njinformatica.easyvote
 
+import android.content.Intent
 import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -32,11 +33,16 @@ class SessionActivity : AppCompatActivity() {
     private fun setupRecyclerView(){
         val columns = if(resources.configuration.orientation
                 == Configuration.ORIENTATION_PORTRAIT) 1
-        else 3
+        else 1
 
         session_list.layoutManager = StaggeredGridLayoutManager(columns,
                 StaggeredGridLayoutManager.VERTICAL)//LinearLayoutManager(this)
-        session_list.adapter = SessionAdapter()
+        session_list.adapter = SessionAdapter{session->
+            startActivity(Intent(this,
+                    SessionDetailActivity::class.java).apply {
+                putExtra(SESSION_EXTRA, session.id)
+            })
+        }
         sessionViewModel.getData(login)
     }
 

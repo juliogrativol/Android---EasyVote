@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import br.com.njinformatica.easyvote.R
 import br.com.njinformatica.easyvote.model.Session
 
-class SessionAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class SessionAdapter(val onItemClick: ((session: Session)->Unit)? = null) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     var items = listOf<Session>()
 
     override fun getItemCount() = items.size
@@ -35,8 +35,16 @@ class SessionAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     }
 
     inner class NewsViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
-        val titleTextView = itemView.findViewById<TextView>(R.id.text_titulo)
+        val titleTextView = itemView.findViewById<TextView>(R.id.text_candidate)
         val quantidadeVagasTextView = itemView.findViewById<TextView>(R.id.text_quantidade_vagas)
         val idSessionTextView = itemView.findViewById<TextView>(R.id.text_session)
+
+        init {
+            itemView.setOnClickListener {
+                val session = items[adapterPosition]
+                onItemClick?.invoke(session)
+            }
+        }
+
     }
 }
