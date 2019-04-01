@@ -28,6 +28,7 @@ class SessionActivity : AppCompatActivity() {
 
         setupRecyclerView()
         subscribe()
+        setupListeners()
     }
 
     private fun setupRecyclerView(){
@@ -44,6 +45,12 @@ class SessionActivity : AppCompatActivity() {
             })
         }
         sessionViewModel.getData(login)
+    }
+
+    private fun setupListeners(){
+        floatingActionButton.setOnClickListener {
+            startActivityForResult(Intent(this, AddSessionActivity::class.java), 1)
+        }
     }
 
     private fun subscribe() {
@@ -63,5 +70,10 @@ class SessionActivity : AppCompatActivity() {
                 progressBar.visibility = View.GONE
             }
         })
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        sessionViewModel.getData(login)
     }
 }
