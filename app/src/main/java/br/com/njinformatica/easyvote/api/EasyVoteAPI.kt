@@ -1,6 +1,7 @@
 package br.com.njinformatica.easyvote.api
 
 import br.com.njinformatica.easyvote.model.Login
+import br.com.njinformatica.easyvote.model.Session
 import br.com.njinformatica.easyvote.model.SessionCandidateResponseObject
 import br.com.njinformatica.easyvote.model.SessionResponseObject
 import retrofit2.Call
@@ -19,4 +20,7 @@ interface EasyVoteAPI {
 
     @GET("session/{sessionId}/candidates")
     fun listSessionCandidates(@Path("sessionId") sessionId: String): Call<SessionCandidateResponseObject>
+
+    @POST("session")
+    fun addSession(@Body session: Session): Call<Session>
 }
