@@ -28,11 +28,11 @@
 
         <TextView
             android:id="@+id/text_quantidade_vagas"
-            android:layout_width="15dp"
-            android:layout_height="20dp"
+            android:layout_width="31dp"
+            android:layout_height="18dp"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="12dp"
-            android:layout_marginRight="12dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
             android:text="1"
             android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
             app:layout_constraintEnd_toEndOf="parent"
@@ -49,7 +49,7 @@
             android:layout_marginRight="8dp"
             android:text="Vagas:"
             app:layout_constraintEnd_toEndOf="@+id/text_quantidade_vagas"
-            app:layout_constraintHorizontal_bias="0.97"
+            app:layout_constraintHorizontal_bias="0.873"
             app:layout_constraintStart_toStartOf="@+id/text_candidate"
             app:layout_constraintTop_toBottomOf="@+id/text_candidate" />
 
@@ -67,5 +67,16 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/text_candidate" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="394dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:background="?android:attr/listDivider"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="@+id/text_quantidade_vagas"
+            app:layout_constraintStart_toStartOf="@+id/text_session"
+            app:layout_constraintTop_toBottomOf="@+id/text_vagas" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
