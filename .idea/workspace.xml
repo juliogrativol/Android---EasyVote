@@ -13,15 +13,12 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/jarAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/session_card.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/session_card.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/br/com/njinformatica/easyvote/viewmodel/SessionCandidateViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/br/com/njinformatica/easyvote/viewmodel/SessionCandidateViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/br/com/njinformatica/easyvote/viewmodel/SessionViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/br/com/njinformatica/easyvote/viewmodel/SessionViewModel.kt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -66,7 +63,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="gradle" value="2" />
-          <entry key="kt" value="3535" />
+          <entry key="kt" value="3662" />
           <entry key="properties" value="1" />
           <entry key="txt" value="602" />
           <entry key="xml" value="158" />
@@ -75,7 +72,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Groovy" value="2" />
-          <entry key="Kotlin" value="3535" />
+          <entry key="Kotlin" value="3662" />
           <entry key="PLAIN_TEXT" value="602" />
           <entry key="Properties" value="1" />
           <entry key="XML" value="158" />
@@ -84,7 +81,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="java" value="18" />
-          <entry key="kt" value="174" />
+          <entry key="kt" value="178" />
           <entry key="properties" value="1" />
           <entry key="xml" value="67" />
         </counts>
@@ -92,7 +89,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JAVA" value="18" />
-          <entry key="Kotlin" value="174" />
+          <entry key="Kotlin" value="178" />
           <entry key="Properties" value="1" />
           <entry key="XML" value="67" />
         </counts>
@@ -102,40 +99,37 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_session_detail.xml">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/br/com/njinformatica/easyvote/viewmodel/SessionCandidateViewModel.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="57" selection-start-line="10" selection-start-column="57" selection-end-line="10" selection-end-column="57" />
+            <state relative-caret-position="136">
+              <caret line="31" column="76" selection-start-line="31" selection-start-column="76" selection-end-line="31" selection-end-column="76" />
             </state>
           </provider>
-          <provider editor-type-id="android-designer2" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/candidate_card.xml">
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="54" selection-start-line="9" selection-start-column="54" selection-end-line="9" selection-end-column="54" />
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/br/com/njinformatica/easyvote/SessionActivity.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="33">
+              <caret line="54" column="9" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
             </state>
           </provider>
-          <provider selected="true" editor-type-id="android-designer2" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/session_card.xml">
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="25" column="57" selection-start-line="25" selection-start-column="57" selection-end-line="25" selection-end-column="57" />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="android-designer2" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/br/com/njinformatica/easyvote/SessionDetailActivity.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="901">
-              <caret line="65" column="40" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="40" />
+            <state relative-caret-position="189">
+              <caret line="62" column="20" lean-forward="true" selection-start-line="62" selection-start-column="20" selection-end-line="62" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/br/com/njinformatica/easyvote/viewmodel/SessionViewModel.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="32" column="62" selection-start-line="32" selection-start-column="62" selection-end-line="32" selection-end-column="62" />
             </state>
           </provider>
         </entry>
@@ -2642,13 +2636,11 @@
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/br/com/njinformatica/easyvote/viewmodel/LoginViewModel.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/br/com/njinformatica/easyvote/model/Session.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/br/com/njinformatica/easyvote/viewmodel/SessionViewModel.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/br/com/njinformatica/easyvote/MainActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/br/com/njinformatica/easyvote/Constants.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/candidate_card.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/br/com/njinformatica/easyvote/adapter/SessionAdapter.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/br/com/njinformatica/easyvote/adapter/SessionCandidateAdapter.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/br/com/njinformatica/easyvote/viewmodel/SessionCandidateViewModel.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_session.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/br/com/njinformatica/easyvote/viewmodel/AddSessionViewModel.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_add_session.xml" />
@@ -2664,6 +2656,8 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_session_detail.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/session_card.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/br/com/njinformatica/easyvote/viewmodel/SessionCandidateViewModel.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/br/com/njinformatica/easyvote/viewmodel/SessionViewModel.kt" />
       </list>
     </option>
   </component>
@@ -2693,13 +2687,20 @@
             <path>
               <item name="Android---EasyVote" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="easyvote" type="cbb59c9e:AndroidPsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Android---EasyVote" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="easyvote" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="viewmodel" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Android---EasyVote" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
             </path>
           </expand>
           <select />
@@ -3021,7 +3022,7 @@
     <frame x="-8" y="6" width="1284" height="670" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.32026145" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.32026145" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Build Variants" order="3" side_tool="true" />
@@ -3029,11 +3030,11 @@
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Captures" order="7" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Build" order="0" visible="true" weight="0.21400778" />
+      <window_info anchor="bottom" id="Build" order="0" weight="0.21400778" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.3005566" />
       <window_info anchor="bottom" id="Run" order="3" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.3463035" />
+      <window_info active="true" anchor="bottom" id="Debug" order="4" visible="true" weight="0.3463035" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.3283859" />
@@ -3105,16 +3106,45 @@
           <option name="timeStamp" value="67" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/br/com/njinformatica/easyvote/viewmodel/SessionCandidateViewModel.kt</url>
-          <line>21</line>
+          <url>file://$PROJECT_DIR$/app/src/main/java/br/com/njinformatica/easyvote/SessionActivity.kt</url>
+          <line>59</line>
           <properties />
-          <option name="timeStamp" value="81" />
+          <option name="timeStamp" value="82" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/br/com/njinformatica/easyvote/SessionDetailActivity.kt</url>
+          <line>53</line>
+          <properties />
+          <option name="timeStamp" value="83" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/br/com/njinformatica/easyvote/viewmodel/SessionCandidateViewModel.kt</url>
+          <line>31</line>
+          <properties />
+          <option name="timeStamp" value="84" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/br/com/njinformatica/easyvote/viewmodel/SessionViewModel.kt</url>
+          <line>32</line>
+          <properties />
+          <option name="timeStamp" value="85" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/br/com/njinformatica/easyvote/viewmodel/SessionCandidateViewModel.kt</url>
+          <line>34</line>
+          <properties />
+          <option name="timeStamp" value="86" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>sessionCandidateResponseObject.candidates.size</expression-string>
+        <language-id>kotlin</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>sessionCandidateResponseObject.candidates</expression-string>
         <language-id>kotlin</language-id>
@@ -3152,11 +3182,6 @@
       </expression>
       <expression>
         <expression-string>quantidadeVagas</expression-string>
-        <language-id>kotlin</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>sessionName</expression-string>
         <language-id>kotlin</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -3291,6 +3316,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-321">
           <caret line="28" column="17" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="17" />
+          <folding>
+            <element signature="e#49#365#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -3351,13 +3379,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/com/njinformatica/easyvote/viewmodel/SessionViewModel.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/br/com/njinformatica/easyvote/api/EasyVoteAPI.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
@@ -3369,6 +3390,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="72" selection-start-line="72" selection-end-line="72" />
+          <folding>
+            <element signature="e#2190#2622#0" expanded="true" />
+            <element signature="e#2621#2622#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -3376,6 +3401,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
           <caret line="873" selection-start-line="873" selection-end-line="873" />
+          <folding>
+            <element signature="e#34939#34940#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -3402,24 +3430,13 @@
       </provider>
       <provider editor-type-id="android-designer2" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/com/njinformatica/easyvote/SessionActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-195">
-          <caret line="54" column="9" lean-forward="true" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/com/njinformatica/easyvote/viewmodel/SessionCandidateViewModel.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="16" column="28" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/br/com/njinformatica/easyvote/adapter/SessionCandidateAdapter.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-58">
           <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+          <folding>
+            <element signature="e#47#308#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -3439,20 +3456,13 @@
       </provider>
       <provider selected="true" editor-type-id="android-designer2" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_session_detail.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="57" selection-start-line="10" selection-start-column="57" selection-end-line="10" selection-end-column="57" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/session_card.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="25" column="57" selection-start-line="25" selection-start-column="57" selection-end-line="25" selection-end-column="57" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/com/njinformatica/easyvote/SessionDetailActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="901">
-          <caret line="65" column="40" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="40" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/candidate_card.xml">
       <provider editor-type-id="text-editor">
@@ -3462,13 +3472,41 @@
       </provider>
       <provider selected="true" editor-type-id="android-designer2" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/session_card.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="25" column="57" selection-start-line="25" selection-start-column="57" selection-end-line="25" selection-end-column="57" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_session_detail.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="10" column="57" selection-start-line="10" selection-start-column="57" selection-end-line="10" selection-end-column="57" />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/com/njinformatica/easyvote/SessionActivity.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33">
+          <caret line="54" column="9" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/com/njinformatica/easyvote/SessionDetailActivity.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="62" column="20" lean-forward="true" selection-start-line="62" selection-start-column="20" selection-end-line="62" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/com/njinformatica/easyvote/viewmodel/SessionCandidateViewModel.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="31" column="76" selection-start-line="31" selection-start-column="76" selection-end-line="31" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/com/njinformatica/easyvote/viewmodel/SessionViewModel.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="32" column="62" selection-start-line="32" selection-start-column="62" selection-end-line="32" selection-end-column="62" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>

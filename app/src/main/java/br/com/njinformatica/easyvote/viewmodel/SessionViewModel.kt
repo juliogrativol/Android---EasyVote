@@ -30,7 +30,10 @@ class SessionViewModel : ViewModel() {
             override fun onResponse(call: Call<SessionResponseObject>, response: Response<SessionResponseObject>) {
                 if (response.isSuccessful){
                     response.body()?.let {newsResponseObject->
-                        sessionList.value = newsResponseObject.sessions
+                        if (newsResponseObject.sessions.size > 0)
+                            sessionList.value = newsResponseObject.sessions
+                        else
+                            message.value = "Não existem sessões cadastradas."
                     }
                 }else{
                     message.value = "Falha ao obter lista de Sessões."

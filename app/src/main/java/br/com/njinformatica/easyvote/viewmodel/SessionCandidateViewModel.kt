@@ -29,7 +29,10 @@ class SessionCandidateViewModel : ViewModel(){
             override fun onResponse(call: Call<SessionCandidateResponseObject>, response: Response<SessionCandidateResponseObject>) {
                 if (response.isSuccessful){
                     response.body()?.let {sessionCandidateResponseObject->
-                        sessionCandidateList.value = sessionCandidateResponseObject.candidates
+                        if (sessionCandidateResponseObject.candidates.size > 0)
+                            sessionCandidateList.value = sessionCandidateResponseObject.candidates
+                        else
+                            message.value = "Não existem candidatos cadastrados."
                     }
                 }else{
                     message.value = "Falha ao obter lista de Candidatos."
