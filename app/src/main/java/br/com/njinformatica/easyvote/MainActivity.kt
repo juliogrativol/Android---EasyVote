@@ -9,6 +9,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import br.com.njinformatica.easyvote.viewmodel.LoginViewModel
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_sessao_votacao.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -49,6 +50,12 @@ class MainActivity : AppCompatActivity() {
     private fun setupListeners(){
         btn_ok.setOnClickListener {
             loginViewModel.login(text_login.text.toString(), text_password.text.toString());
+        }
+
+        btn_entrar_sessao.setOnClickListener {
+            startActivity(Intent(this, SessaoVotacaoActivity::class.java).apply {
+
+            })
         }
 
         btn_clean.setOnClickListener {
