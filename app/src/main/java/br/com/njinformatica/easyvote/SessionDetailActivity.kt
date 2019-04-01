@@ -11,6 +11,7 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import br.com.njinformatica.easyvote.adapter.SessionCandidateAdapter
 import br.com.njinformatica.easyvote.viewmodel.SessionCandidateViewModel
+import kotlinx.android.synthetic.main.activity_session.*
 import kotlinx.android.synthetic.main.activity_session_detail.*
 
 class SessionDetailActivity : AppCompatActivity() {
@@ -29,6 +30,7 @@ class SessionDetailActivity : AppCompatActivity() {
 
         setupRecyclerView()
         subscribe()
+        setupListeners()
     }
 
     private fun setupRecyclerView(){
@@ -59,10 +61,23 @@ class SessionDetailActivity : AppCompatActivity() {
 
         sessionCandidateViewModel.isLoading.observe(this, Observer {
             if (it){
-                progressBar.visibility = View.VISIBLE
+                progressBarCandidateList.visibility = View.VISIBLE
             } else {
-                progressBar.visibility = View.GONE
+                progressBarCandidateList.visibility = View.GONE
             }
         })
+    }
+
+    private fun setupListeners(){
+        floatingActionButtonAddCandidate.setOnClickListener {
+            startActivityForResult(Intent(this, AddCandidateActivity::class.java).apply {
+                putExtra(SESSION_EXTRA, sessionId)
+            }, 200)
+        }
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        sessionCandidateViewModel.getData(sessionId)
     }
 }
