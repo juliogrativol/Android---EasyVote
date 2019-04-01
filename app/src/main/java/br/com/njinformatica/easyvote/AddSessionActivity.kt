@@ -15,6 +15,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 class AddSessionActivity : AppCompatActivity() {
 
     private lateinit var addSessionViewModel: AddSessionViewModel
+    private lateinit var login : String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,13 +23,15 @@ class AddSessionActivity : AppCompatActivity() {
 
         addSessionViewModel = ViewModelProviders.of(this).get(AddSessionViewModel::class.java)
 
+        login = intent.getStringExtra(LOGIN_EXTRA)
+
         setupListeners()
         subscribe()
     }
 
     private fun setupListeners(){
         btn_add_session.setOnClickListener {
-            addSessionViewModel.addSession("juliogrativol", add_session_name.text.toString(), add_session_qtd_vagas.text.toString());
+            addSessionViewModel.addSession(login, add_session_name.text.toString(), add_session_qtd_vagas.text.toString());
             finish()
         }
 

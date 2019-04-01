@@ -49,7 +49,9 @@ class SessionActivity : AppCompatActivity() {
 
     private fun setupListeners(){
         floatingActionButton.setOnClickListener {
-            startActivityForResult(Intent(this, AddSessionActivity::class.java), 1)
+            startActivityForResult(Intent(this, AddSessionActivity::class.java).apply {
+                putExtra(LOGIN_EXTRA, login)
+            }, 100)
         }
     }
 
