@@ -10,7 +10,6 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import br.com.njinformatica.easyvote.viewmodel.AddCandidateViewModel
 import kotlinx.android.synthetic.main.activity_add_candidate.*
-import kotlinx.android.synthetic.main.activity_add_session.*
 import java.util.concurrent.TimeUnit
 
 class AddCandidateActivity : AppCompatActivity() {
