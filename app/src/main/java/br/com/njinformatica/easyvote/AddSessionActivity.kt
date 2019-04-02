@@ -10,7 +10,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import br.com.njinformatica.easyvote.viewmodel.AddSessionViewModel
 import kotlinx.android.synthetic.main.activity_add_session.*
-import kotlinx.android.synthetic.main.activity_main.*
+import java.util.concurrent.TimeUnit
 
 class AddSessionActivity : AppCompatActivity() {
 
@@ -32,6 +32,7 @@ class AddSessionActivity : AppCompatActivity() {
     private fun setupListeners(){
         btn_add_session.setOnClickListener {
             addSessionViewModel.addSession(login, add_session_name.text.toString(), add_session_qtd_vagas.text.toString());
+            TimeUnit.SECONDS.sleep(1L)
             finish()
         }
 

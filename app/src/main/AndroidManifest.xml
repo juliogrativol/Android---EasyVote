@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SessaoVotacaoActivity"></activity>
+        <activity android:name=".VoteSessionActivity"></activity>
+        <activity android:name=".MainSessionVoteActivity" />
         <activity android:name=".AddCandidateActivity" />
         <activity android:name=".AddSessionActivity" />
         <activity android:name=".SessionDetailActivity" />

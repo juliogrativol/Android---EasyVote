@@ -45,6 +45,5 @@ class SessionAdapter(val onItemClick: ((session: Session)->Unit)? = null) : Recy
                 onItemClick?.invoke(session)
             }
         }
-
     }
 }

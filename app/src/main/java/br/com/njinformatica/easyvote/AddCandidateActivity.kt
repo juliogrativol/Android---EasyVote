@@ -11,6 +11,7 @@ import androidx.lifecycle.ViewModelProviders
 import br.com.njinformatica.easyvote.viewmodel.AddCandidateViewModel
 import kotlinx.android.synthetic.main.activity_add_candidate.*
 import kotlinx.android.synthetic.main.activity_add_session.*
+import java.util.concurrent.TimeUnit
 
 class AddCandidateActivity : AppCompatActivity() {
 
@@ -33,6 +34,7 @@ class AddCandidateActivity : AppCompatActivity() {
     private fun setupListeners(){
         btn_add_candidate.setOnClickListener {
             addCandidateViewModel.addCandidate(session, text_add_candidate_name.text.toString(), text_add_candidate_cpf.text.toString());
+            TimeUnit.SECONDS.sleep(1L)
             finish()
         }
 

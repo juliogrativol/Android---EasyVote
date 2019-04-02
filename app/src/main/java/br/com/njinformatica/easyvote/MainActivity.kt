@@ -9,7 +9,6 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import br.com.njinformatica.easyvote.viewmodel.LoginViewModel
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_sessao_votacao.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -53,7 +52,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         btn_entrar_sessao.setOnClickListener {
-            startActivity(Intent(this, SessaoVotacaoActivity::class.java).apply {
+            startActivity(Intent(this, MainSessionVoteActivity::class.java).apply {
 
             })
         }
