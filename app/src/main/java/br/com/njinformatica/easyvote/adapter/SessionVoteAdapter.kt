@@ -9,7 +9,7 @@ import br.com.njinformatica.easyvote.R
 import br.com.njinformatica.easyvote.model.Candidate
 import br.com.njinformatica.easyvote.model.Session
 
-class SessionVoteAdapter(val onItemClick: ((session: Session)->Unit)? = null) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class SessionVoteAdapter(val onItemClick: ((candidate: Candidate)->Unit)? = null) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     var items = listOf<Candidate>()
 
     override fun getItemCount() = items.size
@@ -35,5 +35,12 @@ class SessionVoteAdapter(val onItemClick: ((session: Session)->Unit)? = null) : 
 
     inner class SessionCandidateViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
         val candidateTextView = itemView.findViewById<TextView>(R.id.text_candidate)
+
+        init {
+            itemView.setOnClickListener {
+                val candidate = items[adapterPosition]
+                onItemClick?.invoke(candidate)
+            }
+        }
     }
 }

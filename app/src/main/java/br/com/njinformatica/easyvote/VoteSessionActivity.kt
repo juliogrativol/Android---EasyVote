@@ -1,11 +1,13 @@
 package br.com.njinformatica.easyvote
 
+import android.content.DialogInterface
 import android.content.Intent
 import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
@@ -38,11 +40,29 @@ class VoteSessionActivity : AppCompatActivity() {
 
         session_vote_list.layoutManager = StaggeredGridLayoutManager(columns,
                 StaggeredGridLayoutManager.VERTICAL)//LinearLayoutManager(this)
-        session_vote_list.adapter = SessionVoteAdapter{ session->
-            startActivity(Intent(this,
-                    VoteSessionActivity::class.java).apply {
-                putExtra(SESSION_EXTRA, sessionId)
-            })
+        session_vote_list.adapter = SessionVoteAdapter{ candidate ->
+
+            val dialogBuilder = AlertDialog.Builder(this)
+
+            // set message of alert dialog
+            dialogBuilder.setMessage("Confirma o voto para "+candidate.nome +" ?")
+                    // if the dialog is cancelable
+                    .setCancelable(false)
+                    // positive button text and action
+                    .setPositiveButton("Sim", DialogInterface.OnClickListener {
+                        dialog, id -> finish()
+                    })
+                    // negative button text and action
+                    .setNegativeButton("Não", DialogInterface.OnClickListener {
+                        dialog, id -> dialog.cancel()
+                    })
+
+            // create dialog box
+            val alert = dialogBuilder.create()
+            // set title for alert dialog box
+            alert.setTitle("Confirmação")
+            // show alert dialog
+            alert.show()
         }
 
         voteSessionViewModel.getData(sessionId)
