@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import br.com.njinformatica.easyvote.R
 import br.com.njinformatica.easyvote.model.Candidate
 
-class SessionCandidateAdapter(param: (Any) -> Unit) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class SessionCandidateAdapter(val onItemClick: ((candidate: Candidate)->Unit)? = null) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     var items = listOf<Candidate>()
 
     override fun getItemCount() = items.size
@@ -29,12 +29,19 @@ class SessionCandidateAdapter(param: (Any) -> Unit) : RecyclerView.Adapter<Recyc
 
         if (holder is SessionCandidateViewHolder){
             holder.candidateTextView.text = candidate.nome
-            holder.votesTextView.text = candidate.cpf
+            holder.votesTextView.text = candidate.votos.toString()
         }
     }
 
     inner class SessionCandidateViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
         val candidateTextView = itemView.findViewById<TextView>(R.id.text_candidate)
         val votesTextView = itemView.findViewById<TextView>(R.id.text_votes)
+
+        init {
+            itemView.setOnClickListener {
+                val candidate = items[adapterPosition]
+                onItemClick?.invoke(candidate)
+            }
+        }
     }
 }

@@ -42,4 +42,27 @@ class VoteSessionViewModel : ViewModel() {
             }
         })
     }
+
+    fun vote(sessionId: String, cpf : String){
+        isLoading.value = true
+
+        val call = easyVoteApi.addVote(sessionId, cpf)
+        call.enqueue(object : Callback<String> {
+            override fun onFailure(call: Call<String>, t: Throwable) {
+                isLoading.value = false
+            }
+            override fun onResponse(call: Call<String>, response: Response<String>) {
+                if (response.isSuccessful){
+                    response.body()?.let {String->
+                        message.value = "Voto realizado com sucesso."
+                    }
+                }else{
+                    message.value = "Falha ao realizar o voto."
+                }
+
+                isLoading.value = false
+            }
+        })
+    }
+
 }

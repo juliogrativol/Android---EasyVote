@@ -23,4 +23,10 @@ interface EasyVoteAPI {
 
     @POST("session/{sessionId}/candidates")
     fun addCandidate(@Path("sessionId") sessionId: String, @Body candidate: Candidate): Call<Candidate>
+
+    @POST("session/{sessionId}/candidates/{cpf}/votes")
+    fun addVote(@Path("sessionId") sessionId: String, @Path("cpf") cpf: String): Call<String>
+
+    @GET("session/{sessionId}/candidates/{cpf}/votes")
+    fun getVotes(@Path("sessionId") sessionId: String, @Path("cpf") cpf: String): Call<Votes>
 }

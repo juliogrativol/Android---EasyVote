@@ -4,6 +4,7 @@ import android.content.Intent
 import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Gravity
 import android.view.View
 import android.widget.Toast
 import androidx.lifecycle.Observer
@@ -40,11 +41,8 @@ class SessionDetailActivity : AppCompatActivity() {
 
         session_candidate_rc_list.layoutManager = StaggeredGridLayoutManager(columns,
                 StaggeredGridLayoutManager.VERTICAL)//LinearLayoutManager(this)
-        session_candidate_rc_list.adapter = SessionCandidateAdapter{ session->
-            startActivity(Intent(this,
-                    SessionDetailActivity::class.java).apply {
-                putExtra(SESSION_EXTRA, sessionId)
-            })
+        session_candidate_rc_list.adapter = SessionCandidateAdapter{ candidate ->
+            sessionCandidateViewModel.getVotes(candidate)
         }
         sessionCandidateViewModel.getData(sessionId)
     }
@@ -52,6 +50,12 @@ class SessionDetailActivity : AppCompatActivity() {
     private fun subscribe() {
         sessionCandidateViewModel.message.observe(this, Observer {
             Toast.makeText(this, it, Toast.LENGTH_SHORT).show()
+        })
+
+        sessionCandidateViewModel.voteMessage.observe(this, Observer {
+            val t = Toast.makeText(this, it, Toast.LENGTH_SHORT)
+            t.setGravity(Gravity.CENTER_HORIZONTAL, 0, 250)
+            t.show()
         })
 
         sessionCandidateViewModel.sessionCandidateList.observe(this, Observer {list->

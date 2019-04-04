@@ -50,7 +50,10 @@ class VoteSessionActivity : AppCompatActivity() {
                     .setCancelable(false)
                     // positive button text and action
                     .setPositiveButton("Sim", DialogInterface.OnClickListener {
-                        dialog, id -> finish()
+                        dialog, id ->
+                        voteSessionViewModel.vote(sessionId, candidate.cpf)
+                        Toast.makeText(this, "Voto realizado com sucesso.", Toast.LENGTH_SHORT).show()
+                        //finish()
                     })
                     // negative button text and action
                     .setNegativeButton("Não", DialogInterface.OnClickListener {
