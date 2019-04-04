@@ -29,13 +29,13 @@ class SessionCandidateAdapter(val onItemClick: ((candidate: Candidate)->Unit)? =
 
         if (holder is SessionCandidateViewHolder){
             holder.candidateTextView.text = candidate.nome
-            holder.votesTextView.text = candidate.votos.toString()
+            //holder.votesTextView.text = candidate.votos.toString()
         }
     }
 
     inner class SessionCandidateViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
         val candidateTextView = itemView.findViewById<TextView>(R.id.text_candidate)
-        val votesTextView = itemView.findViewById<TextView>(R.id.text_votes)
+        //val votesTextView = itemView.findViewById<TextView>(R.id.text_votes)
 
         init {
             itemView.setOnClickListener {

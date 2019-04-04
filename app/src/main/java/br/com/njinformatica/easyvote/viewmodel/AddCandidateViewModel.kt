@@ -22,7 +22,7 @@ class AddCandidateViewModel : ViewModel() {
 
         if (validaForm(sessao, candidateName, cpf)) {
 
-            addCandidate(Candidate(cpf, candidateName, "true", sessao, 0),
+            addCandidate(Candidate(cpf, candidateName, "true", sessao),
                     {
                         message.value = "Candidato com sucesso."
                         isLoading.value = false
